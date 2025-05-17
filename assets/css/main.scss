@@ -7,3 +7,38 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+}
+
