@@ -12,19 +12,46 @@
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 <!-- Hamburger Button -->
-<div class="hamburger" onclick="toggleMenu()">
-  ☰
+<div class="mobile-layout">
+  <header>
+  <nav>
+    <a class="site-title" href="">Site Title</a>
+    <input type="checkbox" id="main-nav" class="main-nav">
+    <label for="main-nav" id="toggle-menu">Menu
+      <div class="hamburger">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+        <span class="bar bar4"></span>
+      </div>
+    </label>
+    <ul class="first-level-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Cakes & Bakes</a></li>
+      <li><a href="#">Food & Drink</a></li>
+      <li><a href="#">Our Menu</a></li>
+      <li>
+        <a href="#">Cookery Classes</a>
+        <input type="checkbox" id="sub-nav-1" class="sub-nav-1">
+        <label for="sub-nav-1" id="toggle-menu">
+          <div class="hamburger">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+          </div>
+        </label>
+        <ul class="second-level-nav">
+          <li><a href="#">Introduction to real bread baking</a></li>
+          <li><a href="#">Pasta Fresca - The joy of handmade pasta</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Store & Post Office</a></li>
+      <li><a href="#">News</a></li>
+    </ul>
+  </nav>
+</header>
 </div>
-
-<!-- Navigation Menu -->
-<nav id="menu" class="nav-menu">
-  <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-    <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-    <!-- Add more links as needed -->
-  </ul>
-</nav>
     <div class="initial-content">
       {{ content }}
       {% include after-content.html %}
