@@ -122,7 +122,7 @@ Rgrid <- raster(Resistance_grid)
 
 
 bbdf <- st_bbox(select_nodes) %>%
-  bb_poly(.) %>% #,projection = st_crs(fin_poly)) %>%
+  bb_poly(.) %>% 
   st_as_sf() %>%
   st_buffer(., dist = 100) 
 
@@ -136,12 +136,12 @@ lcp <- create_lcp(x = tr1,
   st_as_sf() 
 
 tiles <- get_tiles(x = lcp,
-                   provider = "OpenTopoMap")#"CartoDB.PositronNoLabels")
+                   provider = "CartoDB.PositronNoLabels")
 m1 <- tm_shape(tiles,bbox = st_bbox(bbdf))+
   tm_rgb(legend.show = F)+
-  tm_shape(unselect_polys)+
-  tm_polygons(col = 'green',
-              alpha = .2)+
+  # tm_shape(unselect_polys)+
+  # tm_polygons(col = 'green',
+  #             alpha = .2)+
   tm_shape(select_polys)+
   tm_polygons(col = 'green')+
   tm_shape(lcp)+
