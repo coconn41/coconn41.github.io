@@ -22,10 +22,33 @@ body {
   display: block;
 }
 
-// site title
-a.site-title {
-  line-height: 30px;
-  display:inline-block;
-  padding: 1rem 0;
+.sidebar a {
+  font-family: 'Arial', sans-serif; /* Replace with your desired font */
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
 }
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+  text-align: right;  /* Align text to the right */
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  display: block;
+  padding-right: 10px; /* Optional spacing from the right */
+}
+
+// site title
+// a.site-title {
+//  line-height: 30px;
+//  display:inline-block;
+//  padding: 1rem 0;
+// }
 
