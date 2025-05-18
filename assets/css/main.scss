@@ -16,6 +16,18 @@ body {
   font-family: 'Old Standard TT', serif;
 }
 
+.masthead img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// site title
+a.site-title {
+  line-height: 30px;
+  display:inline-block;
+  padding: 1rem 0;
+}
 
 /* HAMBURGER */
 .hamburger {
@@ -39,7 +51,7 @@ body {
     display: block;
     border-radius: 3px;
     transition: all 0.4s ease-in-out;
-    position: absolute; 
+    position: relative; 
 }
 
 .bar1 {
