@@ -1,5 +1,3 @@
----
----
 <!doctype html>
 {% include copyright.html %}
 <html lang="{{ site.locale | replace: "_", "-" | default: "en" }}" class="no-js">
@@ -12,30 +10,23 @@
   <img src="{{ '/images/Masthead_map.jpg' | relative_url }}" alt="Site banner">
 </header>
 
-
-<!--  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
-<!--    {% include_cached skip-links.html %}
-<!--    {% include_cached masthead.html %}
-<!-- Hamburger Button -->
-<div class="mobile-layout">
-  <header>
-  <nav>
-      <div class="hamburger">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-        <span class="bar bar4"></span>
-      </div>
-    </label>
-    <ul class="first-level-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">C/V</a></li>
-      <li><a href="#">Research</a></li>
-      <li><a href="#">Visualizations</a></li>
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached masthead.html %}
+    
+    <nav class="sidebar">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <!-- Add more links as needed -->
     </ul>
   </nav>
-</header>
-</div>
+
+  <main class="main-content">
+    {{ content }}
+  </main>
+
     <div class="initial-content">
       {{ content }}
       {% include after-content.html %}
@@ -55,13 +46,5 @@
     </div>
 
     {% include scripts.html %}
-    
-    <script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-  }
-</script>
-
   </body>
 </html>

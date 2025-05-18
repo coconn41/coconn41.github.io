@@ -148,18 +148,18 @@ m1 <- tm_shape(tiles,bbox = st_bbox(bbdf))+
   tm_lines(col = 'black',
            lwd = 2.5)+
   tm_shape(lcp)+
-  tm_lines(col = 'purple',
+  tm_lines(col = '#03a9f4',
            lwd = 2)+
   tm_shape(select_nodes)+
   tm_dots(size = .5,
           col = 'black')+
   tm_shape(select_nodes)+
   tm_dots(size = .35,
-          col = 'purple')+
-  tm_shape(select_nodes)+
-  tm_text(text = 'text',
-          ymod=.6,
-          size=.6)
+          col = '#03a9f4')#+
+  # tm_shape(select_nodes)+
+  # tm_text(text = 'text',
+  #         ymod=.6,
+  #         size=.6)
 tmap_save(m1,
           filename = paste0(getwd(), "/images/Masthead_map.jpg"),
           width = 7.5,
