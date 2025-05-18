@@ -16,27 +16,12 @@ body {
   font-family: 'Old Standard TT', serif;
 }
 
-// stuff for this codepen but not needed
-.mobile-layout {
-  width:800px;
-  background-color: #fff;
-  margin: 0 auto;
-  
-  header {
-    padding: 1rem;
-  }
-}
-
-// site title
-a.site-title {
-  line-height: 30px;
-  display:inline-block;
-  padding: 1rem 0;
-}
 
 /* HAMBURGER */
 .hamburger {
     margin: 0 auto;
+    top: 1rem;
+    right: 1rem;
     // margin-top: 30px;
     width: 30px;
     height: 30px;
