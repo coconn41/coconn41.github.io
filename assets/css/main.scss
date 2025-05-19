@@ -16,9 +16,65 @@ body {
   font-family: 'Old Standard TT', serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  grid-row: 2;
+  display: flex; /* or block, but flex gives more control */
+  overflow: auto;
+}
+
+
+
+.page__footer {
+  /* stays at bottom */
+}
+.topnav {
+  height: 50px; /* Fixed height */
+  background-color: #faf7f2; /* Match background or set your own */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertical centering */
+  border-bottom: 1px solid #ccc; /* Optional */
+  position: relative; /* Stays in flow */
+  z-index: 100; /* In case it overlaps */
+  padding: 0; /* Remove padding */
+}
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Space between items */
+  margin: 0;
+  padding: 0;
+}
+
+.topnav li {
+  display: inline;
+}
+
+.topnav a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  padding: 0.25rem 0.5rem;
+}
+
+
 .masthead img {
   width: 100%;
-  height: 50%;
+  height: auto;
   display: block;
 }
 
@@ -38,6 +94,23 @@ body {
   overflow: hidden !important;
 }
 
+.sidebar {
+  width: 220px;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  position: fixed;
+  top: 200px;
+  left: 0;
+  z-index: 1000;
+  min-height: calc(100vh - 150px); /* height below the masthead */
+}
+
+.main-content {
+  margin-left: 240px; /* sidebar width + spacing */
+  padding: 2rem; /* optional */
+}
+
+
 .sidebar a {
   font-family: 'Arial', sans-serif; /* Replace with your desired font */
   font-size: 16px;
@@ -49,7 +122,7 @@ body {
 .sidebar ul {
   padding: 0;
   list-style: none;
-  text-align: right;  /* Align text to the right */
+  text-align: left;  /* Align text to the right */
 }
 
 .sidebar li {

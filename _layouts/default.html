@@ -6,28 +6,43 @@
     {% include head/custom.html %}
   </head>
 
-<header class="masthead">
-  <img src="{{ '/images/Masthead_map.jpg' | relative_url }}" alt="Site banner">
-</header>
-
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
+
+    <header class="masthead">
+      <img src="{{ '/images/Masthead_map.jpg' | relative_url }}" alt="Site banner">
+    </header>
+<nav class="topnav">
+  <ul>
+           <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+           <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+           <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+           <li><a href="{{ '/cv/' | relative_url }}">Curriculum Vitae</a></li>
+           <li><a href="{{ '/visualizations/' | relative_url }}">Visualizations</a></li>
+    <!-- Add more links as needed -->
+  </ul>
+</nav>
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
-<div class="page-wrapper">
-    <nav class="sidebar">
-    <ul>
-      <li><a href="{{ '/docs/_pages/about/' | relative_url }}">About</a></li>
-      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-      <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
-      <li><a href="{{ '/cv/' | relative_url }}">Curriculum Vitae</a></li>
-      <li><a href="{{ '/visualizations/' | relative_url }}">Visualizations</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </nav>
 
-  <main class="main-content">
-    {{ content }}
-    {% include after-content.html %}
+    <div class="page-wrapper">
+      <nav class="sidebar">
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="#">Another Link</a></li>
+           <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+           <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+           <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+           <li><a href="{{ '/cv/' | relative_url }}">Curriculum Vitae</a></li>
+           <li><a href="{{ '/visualizations/' | relative_url }}">Visualizations</a></li>
+      <!-- Add more links as needed -->
+          <!-- ... -->
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        {{ content }}
+        {% include after-content.html %}
+      </main>
     </div>
 
     {% if site.search == true %}
