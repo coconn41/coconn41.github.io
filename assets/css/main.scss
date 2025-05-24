@@ -9,6 +9,19 @@ search: false
 @import "minimal-mistakes"; // main partials
 
 @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:700&display=swap');
+
+.page__footer-follow ul.social-icons li a[href*="github.com"] i {
+  display: none;
+}
+
+.page__footer-follow ul.social-icons li a[href*="researchgate.net"] i {
+  display: none;
+}
+
+.page__footer-follow ul.social-icons li a[href*="bluesky.app"] i {
+  display: none;
+}
+
 html {
   background-color: #faf7f2;
 }
@@ -33,7 +46,13 @@ body {
   overflow: auto;
 }
 
-
+.page__footer,
+.page__footer a,
+.page__footer ul.social-icons li a,
+.page__footer .page__footer-copyright {
+  text-transform: none !important;  /* disables all caps */
+  /* Optional: adjust font style if needed */
+}
 
 .page__footer {
   /* stays at bottom */

@@ -1,8 +1,7 @@
 ---
-layout: archive
-title: "Test"
-subtitle: "Latest Updates"
-permalink: /updates/
+title: "About"
+permalink: /
+layout: default
 ---
 
 # Hey!
