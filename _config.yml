@@ -21,7 +21,7 @@ title                    : # "Collin O'Connor's personal website and portfolio"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Your Name"
-description              : "An amazing website.""
+description              : "An amazing website."
 url                      : "https://coconn41.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Collin J. O'Connor, Ph.D."
   avatar           : "/images/CollinUB.jpg"
-  bio              : "Tick-borne disease researcher, geographer, and epidemiologist"
+  bio              : "Tick-borne disease epidemiologist, ecologist, and biogeographer."
   location         : "Buffalo, NY, USA"
   email            : 
   links:
@@ -125,6 +125,9 @@ author:
     - label: "Bluesky"
       icon: "fas fa-fw fa-bluesky-square"
       # url: https://bsky.app
+    - label: "ResearchGate"
+      icon: "fas fa-fw fa-researchgate-square"
+      # url: https://researchgate.net
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -144,6 +147,9 @@ footer:
     - label: "Bluesky"
       icon: "fab fa-fw fa-bluesky-square"
       url: https://bsky.app/profile/skepticksci.bsky.social
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate-square"
+      url: https://www.researchgate.net/profile/Collin-Oconnor-2?ev=hdr_xprf
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
