@@ -2,6 +2,7 @@
 title: "Visualizations"
 permalink: /visualizations/
 layout: default
+author_profile: true
 ---
 
 # Hey!
@@ -9,5 +10,6 @@ layout: default
 ## This works the same was as Rmarkdown
 
 ```{r}
+2+2
 print("hello world")
 ```

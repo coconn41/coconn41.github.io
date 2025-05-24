@@ -25,25 +25,17 @@
     {% include_cached masthead.html %}
 
     <div class="page-wrapper">
-      <nav class="sidebar">
-        <ul>
-          <li><a href="/about/">About</a></li>
-          <li><a href="#">Another Link</a></li>
-           <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-           <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-           <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
-           <li><a href="{{ '/cv/' | relative_url }}">Curriculum Vitae</a></li>
-           <li><a href="{{ '/visualizations/' | relative_url }}">Visualizations</a></li>
-      <!-- Add more links as needed -->
-          <!-- ... -->
-        </ul>
-      </nav>
-
-      <main class="main-content">
-        {{ content }}
-        {% include after-content.html %}
-      </main>
-    </div>
+  {% include sidebar.html %}
+{% unless page.url == "/" %}
+  <aside class="sidebar">
+    {% include sidebar.html %}
+  </aside>
+{% endunless %}
+  <main class="main-content">
+    {{ content }}
+    {% include after-content.html %}
+  </main>
+</div>
 
     {% if site.search == true %}
       <div class="search-content">

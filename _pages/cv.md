@@ -2,6 +2,7 @@
 title: "Curriculum Vitae"
 permalink: /cv/
 layout: default
+author_profile: true
 ---
 
 # Hey!
