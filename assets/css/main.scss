@@ -159,12 +159,20 @@ body {
   padding-right: 10px; /* Optional spacing from the right */
 }
 
+.sidebar-inner {
+  padding-top: 120px; /* Adjust this value as needed */
+}
+
 p {
   line-height: 1;
 }
 
 .invisible {
   visibility: hidden;
+}
+
+.custom-font {
+  font-family: 'Times New Roman', serif; // or any font you like
 }
 
 
