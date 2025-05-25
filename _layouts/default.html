@@ -27,9 +27,11 @@
     <div class="page-wrapper">
   {% include sidebar.html %}
 {% unless page.url == "/" %}
-  <aside class="sidebar">
+<nav class="sidebar">
+  <div class="sidebar-content">
     {% include sidebar.html %}
-  </aside>
+ </div>
+</nav>
 {% endunless %}
   <main class="main-content">
     {{ content }}

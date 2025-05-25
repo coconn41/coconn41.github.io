@@ -55,6 +55,7 @@ body {
 }
 
 .page__footer {
+  z-index: 10;
   /* stays at bottom */
 }
 .topnav {
@@ -118,7 +119,7 @@ body {
   background-color: #f0f0f0;
   padding: 1rem;
   position: fixed;
-  top: 200px;
+  /* top: 200px; */
   left: 0;
   z-index: 1;
   min-height: calc(100vh - 150px); /* height below the masthead */
@@ -138,6 +139,11 @@ body {
   text-decoration: none;
 }
 
+.sidebar .sidebar-content {
+  margin-top: 2rem; /* or adjust as needed */
+}
+
+
 .sidebar ul {
   padding: 0;
   list-style: none;
@@ -152,6 +158,15 @@ body {
   display: block;
   padding-right: 10px; /* Optional spacing from the right */
 }
+
+p {
+  line-height: 1;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 
 // site title
 // a.site-title {
