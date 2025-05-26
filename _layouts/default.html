@@ -26,13 +26,12 @@
 
     <div class="page-wrapper">
   {% include sidebar.html %}
-{% unless page.url == "/" %}
 <nav class="sidebar">
   <div class="sidebar-content">
     {% include sidebar.html %}
- </div>
+  </div>
 </nav>
-{% endunless %}
+
   <main class="main-content">
     {{ content }}
     {% include after-content.html %}

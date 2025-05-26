@@ -175,6 +175,15 @@ p {
   font-family: 'Times New Roman', serif; // or any font you like
 }
 
+.custom-layout .archive {
+  padding-top: 0;
+}
+
+body.layout--home .main-content {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 
 // site title
 // a.site-title {
