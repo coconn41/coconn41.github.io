@@ -15,7 +15,7 @@ conway <- rast(matrix(nrow = 5,
 m1 <- tm_shape(conway)+
   tm_raster(legend.show=F,
             palette = c('#f0fff0',"#1976d2"))+
-  tm_layout(frame = F,outer.margins = F)
+  tm_layout(frame = F,outer.margins = F,bg.color = '#f0fff0')
 tmap_save(m1,
           filename=paste0(getwd(),'/images/GOL.jpeg'),
           width=7.5,
