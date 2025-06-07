@@ -51,7 +51,7 @@ m2 <- tm_shape(conway_gif)+
   tm_facets(along = 'gifind')
 anim <- tmap_animation(m2,
                        filename=paste0(getwd(),'/images/GOL_gif.gif'),
-                       width=750,
-                       height=150,
+                       width=7500,
+                       height=1500,
                        dpi=300)
 
